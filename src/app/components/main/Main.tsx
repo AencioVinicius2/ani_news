@@ -17,6 +17,7 @@ import img16 from '../../assets/Sengoku-Youko-tem-sua-data-de-estreia-anunciada-
 import img17 from '../../assets/As-a-Reincarnated-Aristocrat-recebe-seu-2o-video-promocional-1-jpg.webp';
 import { Sidebar } from '../sidebar/Sidebar';
 
+
 interface ISectionPostsProps {
   img: string,
   title: string,
