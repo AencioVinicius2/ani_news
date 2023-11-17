@@ -7,6 +7,52 @@ import img5 from '../../assets/mangas-img/manga-5.webp';
 import img6 from '../../assets/mangas-img/manga-6.webp';
 import img7 from '../../assets/mangas-img/manga-7.webp';
 
+interface IPostItemsProps {
+  img: string,
+  title: string,
+  alt: string,
+}
+
+const postItems: IPostItemsProps[] = [
+  {
+    img: img1,
+    title: 'Mangá “A Condition Called Love” entra no arco final',
+    alt: '',
+  },
+  {
+    img: img2,
+    title: 'Mangá The Ichinose Family’s Deadly Sins está finalizado',
+    alt: '',
+  },
+  {
+    img: img3,
+    title: 'Ranking: 10 mangás mais vendidos no Japão em outubro de 2023',
+    alt: '',
+  },
+  {
+    img: img4,
+    title: 'Mangá Yofukashi no Uta entra em último arco no 18º volume',
+    alt: '',
+  },
+  {
+    img: img5,
+    title: 'Noragami: Mangá encerra sua jornada e deixa fãs órfãos',
+    alt: '',
+  },
+  {
+    img: img6,
+    title: 'Chihayafuru: Mangá tem sequência anunciada',
+    alt: '',
+  },
+  {
+    img: img7,
+    title: 'Mangá de Vampire Dormitory será adaptado para anime em 2024',
+    alt: '',
+  },
+
+
+];
+
 export const Sidebar = () => {
   return (
     <div className='lg:w-1/3 w-4/5 m-auto lg:m-2 my-4 p-2 flex justify-center border-solid'>
@@ -15,59 +61,16 @@ export const Sidebar = () => {
 
         <h1 className='smy-4 text-3xl'>Mangas</h1>
 
-        <li className='my-8 flex lg:flex-row flex-col items-center justify-center'>
-          <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' 
-            src={img1} alt="" 
-          />
-          <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
-          Mangá “A Condition Called Love” entra no arco final
-          </p>
-        </li>
-
-        <li className='my-8 flex lg:flex-row flex-col items-center justify-center'>
-          <img 
-            className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' 
-            src={img2} alt="" 
-          />
-          <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
-            Mangá The Ichinose Family’s Deadly Sins está finalizado
-          </p>
-        </li>
-
-        <li className='my-8 flex lg:flex-row flex-col items-center justify-center'>
-          <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' src={img3} alt="" />
-          <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
-            Mangá “A Condition Called Love” entra no arco final
-          </p>
-        </li>
-
-        <li className='my-8 flex lg:flex-row flex-col items-center justify-center'>
-          <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' src={img4} alt="" />
-          <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
-            Mangá Yofukashi no Uta entra em último arco no 18º volume
-          </p>
-        </li>
-
-        <li className='my-8 flex lg:flex-row flex-col items-center justify-center'>
-          <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' src={img5} alt="" />
-          <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
-            Noragami: Mangá encerra sua jornada e deixa fãs órfãos
-          </p>
-        </li>
-
-        <li className='my-8 flex lg:flex-row flex-col items-center justify-center'>
-          <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' src={img6} alt="" />
-          <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
-            Chihayafuru: Mangá tem sequência anunciada
-          </p>
-        </li>
-
-        <li className='my-8 flex lg:flex-row flex-col items-center justify-center'>
-          <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' src={img7} alt="" />
-          <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
-            Mangá de Vampire Dormitory será adaptado para anime em 2024
-          </p>
-        </li>
+        {postItems.map((item) => (
+          <li key={item.title} className='my-8 flex lg:flex-row flex-col items-center justify-center'>
+            <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' 
+              src={item.img} alt={item.alt} 
+            />
+            <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
+              {item.title}
+            </p>
+          </li>
+        ))}
 
       </ul>
     </div>

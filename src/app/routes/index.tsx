@@ -5,7 +5,6 @@ import { Noticias } from '../pages';
 import { Sobre } from '../pages';
 import { Contato } from '../pages';
 import { Layout } from '../components';
-import { Main } from '../components/main/Main';
 import { Routes, Route, Navigate} from 'react-router-dom';
 
 export const AppRoutes = () => {
