@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
-  
   interface INavbarProps {
     page: string,
     href: string,
@@ -30,20 +29,24 @@ export const Header = () => {
     },
   ];
 
-
   return (
-    <header className='bg-indigo-700 p-12 text-white font-serif text-lg flex justify-center'>
+    <header className='bg-indigo-700 p-12 text-white text-center font-serif text-lg flex justify-center'>
+      
       <nav>
         <ul className='lg:flex'>  
           {navbar.map((item) => (
-            <li  key={item.page} className='lg:ml-6 lg:mr-6 hover:bg-white hover:text-black p-1 rounded-sm'>
-              <Link to={item.href}>
+            <li  key={item.page} className='lg:ml-6 lg:mr-2 my-4'>
+              <NavLink to={item.href} className={( {isActive} ) => 
+                isActive 
+                  ? 'bg-white text-black rounded-sm py-2 px-3 transition delay-150' 
+                  : ' hover:bg-white hover:text-black rounded-sm py-2 px-3 transition delay-100' }>
                 {item.page}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>  
       </nav>
+      
     </header>
   );
 };

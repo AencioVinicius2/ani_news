@@ -66,7 +66,7 @@ export const Sidebar = () => {
             <img className='lg:w-36 w-3/5 rounded-lg cursor-pointer transition hover:scale-105 lg:hover:scale-110 delay-75' 
               src={item.img} alt={item.alt} 
             />
-            <p className='lg:w-80 w-full md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
+            <p className='lg:w-80 w-3/5 md:w-2/4 text-center lg:text-start my-2 mx-4 hover:text-gray-400 cursor-pointer'>
               {item.title}
             </p>
           </li>
