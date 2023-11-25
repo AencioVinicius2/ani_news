@@ -36,7 +36,7 @@ export const Nav = () => {
       <nav className=' justify-center border-solid m-auto'>
         <ul className='lg:flex justify-center'>   
           {navbar.map((item) => (
-            <li  key={item.page} className='lg:ml-6 lg:mr-2 my-4'>
+            <li  key={item.page} className='lg:ml-6 lg:mr-2 my-4 text-xl'>
               <NavLink to={item.href} className={( {isActive} ) => 
                 isActive 
                   ? 'bg-white text-black rounded-sm py-2 px-3 transition delay-150' 

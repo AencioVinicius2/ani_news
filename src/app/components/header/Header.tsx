@@ -11,7 +11,7 @@ export const Header = () => {
   }
   
   return (
-    <header className='bg-indigo-700 p-12 text-white text-center font-serif text-lg flex flex-col'>
+    <header className='bg-indigo-700 p-6 text-white text-center font-serif text-lg flex flex-col'>
       {!isOpen && 
       <div>
         <div className='lg:hidden w-full h-11 my-2 flex flex-row-reverse hover:cursor-pointer'>

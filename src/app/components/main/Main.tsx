@@ -92,7 +92,7 @@ const sectionPosts: ISectionPostsProps[] = [
 
 export const Main = () => {
   return (
-    <main className='lg:flex lg:justify-around m-auto mt-14 w-4/5 max-w-[1980px]grid lg:grid-cols-2'>
+    <main className='lg:flex lg:justify-around m-auto mt-14 w-4/5 max-w-[1980px] grid lg:grid-cols-2'>
       <div>
         <section className='grid lg:grid-cols-2 m-auto my-4 lg:m-2 gap-5 max-w-screen-md'>
           {sectionPosts.map((item) => (
