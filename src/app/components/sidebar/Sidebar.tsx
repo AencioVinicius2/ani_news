@@ -59,7 +59,7 @@ export const Sidebar = () => {
       
       <ul className='p-2 text-center'>
 
-        <h1 className='smy-4 text-3xl'>Mangas</h1>
+        <h1 className='smy-4 text-3xl'>Mangás</h1>
 
         {postItems.map((item) => (
           <li key={item.title} className='my-8 flex lg:flex-row flex-col items-center justify-center'>
